@@ -44,11 +44,20 @@ void GetPlayerChoice(Square player, int arr[]) {
     arr[1] = stoi(c);
 }
 
-void PlaceMaker(std::vector<std::vector<Square>>* board, int arr[], square player) {
-    board->at(arr[0]).at[arr[1]] = player;
+void PlaceMarker(std::vector<std::vector<Square>>* board, int arr[], Square player) {
+    board->at(arr[0]).at(arr[1]) = player;
 }
 
 int main() {
+    Square players[2] = {Square::O, Square::X};
+    int coords[2];
     std::vector<std::vector<Square>> board = CreateBoard();
+
+    for (int i=0; i<9; i++) {
+        DisplayBoard(board);
+        Square player = players[i%2];
+        GetPlayerChoice(player, coords);
+        PlaceMarker(&board, coords, player);
+    }
     DisplayBoard(board);
 }
