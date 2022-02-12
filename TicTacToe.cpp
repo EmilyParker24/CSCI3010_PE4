@@ -27,12 +27,18 @@ void DisplayBoard(const std::vector<std::vector<Square>> board) {
     }
 }
 
-void GetPlayerChoice(int arr[]) {
-    std::cout << "Select row 0, 1, or 2 top to bottom: ";
+void GetPlayerChoice(Square player, int arr[]) {
+    std::string name;
+    switch(player) {
+        case Square::Empty : name = "?";  break;
+        case Square::X : name = "X"; break;
+        case Square::O : name = "O";  break;
+    }
+    std::cout << name << " select row 0, 1, or 2 top to bottom: ";
     std::string c;
     std::cin >> c;
     arr[0] = stoi(c);
-    std::cout << "Select column 0, 1, or 2 left to right: ";
+    std::cout << name << " select column 0, 1, or 2 left to right: ";
     std::cin >> c;
     arr[1] = stoi(c);
 }
