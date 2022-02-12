@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 enum class Square {Empty, X, O};
 
@@ -43,6 +44,9 @@ void GetPlayerChoice(Square player, int arr[]) {
     arr[1] = stoi(c);
 }
 
+void PlaceMaker(std::vector<std::vector<Square>>* board, int arr[], square player) {
+    board->at(arr[0]).at[arr[1]] = player;
+}
 
 int main() {
     std::vector<std::vector<Square>> board = CreateBoard();
