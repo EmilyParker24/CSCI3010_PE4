@@ -1,0 +1,68 @@
+   |   |
+-----------
+   |   |
+-----------
+   |   |
+O select row 0, 1, or 2 top to bottom: 0
+O select column 0, 1, or 2 left to right: 0
+ O |   |
+-----------
+   |   |
+-----------
+   |   |
+X select row 0, 1, or 2 top to bottom: 1
+X select column 0, 1, or 2 left to right: 1
+ O |   |
+-----------
+   | X |
+-----------
+   |   |
+O select row 0, 1, or 2 top to bottom: 2
+O select column 0, 1, or 2 left to right: 2
+ O |   |
+-----------
+   | X |
+-----------
+   |   | O
+X select row 0, 1, or 2 top to bottom: 1
+X select column 0, 1, or 2 left to right: 2
+ O |   |
+-----------
+   | X | X
+-----------
+   |   | O
+O select row 0, 1, or 2 top to bottom: 2
+O select column 0, 1, or 2 left to right: 1
+ O |   |
+-----------
+   | X | X
+-----------
+   | O | O
+X select row 0, 1, or 2 top to bottom: 0
+X select column 0, 1, or 2 left to right: 1
+ O | X |
+-----------
+   | X | X
+-----------
+   | O | O
+O select row 0, 1, or 2 top to bottom: 0
+O select column 0, 1, or 2 left to right: 2
+ O | X | O
+-----------
+   | X | X
+-----------
+   | O | O
+X select row 0, 1, or 2 top to bottom: 2
+X select column 0, 1, or 2 left to right: 0
+ O | X | O
+-----------
+   | X | X
+-----------
+ X | O | O
+O select row 0, 1, or 2 top to bottom: 1
+O select column 0, 1, or 2 left to right: 0
+ O | X | O
+-----------
+ O | X | X
+-----------
+ X | O | O
