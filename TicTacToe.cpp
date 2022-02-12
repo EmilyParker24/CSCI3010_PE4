@@ -12,13 +12,23 @@ std::vector<std::vector<Square>> CreateBoard() {
     return board;
 }
 
-void DisplayBoard(std::vector<std::vector<Square>> board) {
-    std::cout << board.at(0) << " " << board.at(1) << " " << board.at(2) << std::endl;
-    std::cout << board.at(3) << " " << board.at(4) << " " << board.at(5) << std::endl;
-    std::cout << board.at(6) << " " << board.at(7) << " " << board.at(8) << std::endl;
+void DisplayBoard(const std::vector<std::vector<Square>> board) {
+    for (int i=0; i<3; i++) {
+        if (i != 0) {std::cout << "-----------" <<std::endl;}
+        for (int j=0; j<3; j++) {
+            if (j != 0) {std::cout << "|";}
+            switch(board[i][j]) {
+                case Square::Empty : std::cout << "   ";  break;
+                case Square::X : std::cout << " X "; break;
+                case Square::O : std::cout << " O ";  break;
+            }
+        }
+        std::cout << std::endl;
+    }
 }
 
 
 int main() {
     std::vector<std::vector<Square>> board = CreateBoard();
+    DisplayBoard(board);
 }
