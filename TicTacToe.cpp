@@ -18,6 +18,10 @@ void DisplayBoard(std::vector<std::vector<Square>> board) {
     std::cout << board.at(6) << " " << board.at(7) << " " << board.at(8) << std::endl;
 }
 
+void PlaceMaker(std::vector<std::vector<Square>>* board, int arr[], square player) {
+    board->at(arr[0]).at[arr[1]] = player;
+}
+
 
 int main() {
     std::vector<std::vector<Square>> board = CreateBoard();
